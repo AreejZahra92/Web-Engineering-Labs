@@ -1,19 +1,11 @@
-# Web Engineering — Lab 1
+# 🌐 Web Engineering — Lab 1
 
-This repository contains my completed work for **Web Engineering Lab 1**, including all activities, outputs, screenshots, and reflection.
+My completed work for **Web Engineering Lab 1**, including activities, outputs, screenshots, and submission.
 
-### Topics Covered
+### 📁 Contents
 
-* Browser DevTools
-* Network panel
-* HTTP requests & status codes
-* `file://` vs `localhost`
-* Web development basics
+* Lab activities & outputs
+* 📸 Screenshots
+* 📄 Lab submission (`.docx`)
 
-### Tools
-
-* VS Code
-* Chrome DevTools
-* Local Web Server
-
-**Author:** Fatima Zehra
+**👩‍💻 Author:** Areej Zahra
