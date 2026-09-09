@@ -24,4 +24,13 @@ My completed work for **Web Engineering**, including activities, outputs, screen
 - `styles.css` — external stylesheet for `profile.html`
 - `Web-Engineering-Lab-3.docx` — lab submission (activity screenshots + explanations)
 
+## LAB-4 — CSS Layout (Flexbox, Grid, Position & Responsive Design)
+
+- `week-04/gallery.html` — Flexbox gallery (wrap, gap, flex-basis, justify-content)
+- `week-04/grid-gallery.html` — Grid gallery (auto-fit + minmax) and mobile-first breakpoints
+- `week-04/position.html` — CSS position demo (static, relative, absolute, fixed, sticky)
+- `week-04/youtube-clone.html` — Grey-box layout clone of YouTube (Grid page shell + Flexbox components)
+- `week-04/layout-debug.html` — Break-and-fix exercise (flex overflow, image horizontal scroll)
+- `Web-Engineering-Lab-4.docx` — lab submission (activity screenshots + homework)
+
 **Author:** Areej Zahra
