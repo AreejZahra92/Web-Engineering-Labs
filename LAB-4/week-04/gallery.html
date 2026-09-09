@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flexbox gallery</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 1rem;
+      }
+      .photo {
+        background: #ddd;
+        text-align: center;
+        flex: 1 1 160px;
+      }
+      .photo img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox gallery</h1>
+    <section class="gallery">
+      <div class="photo">
+        <img src="https://picsum.photos/id/11/400/300" alt="Photo 1" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/id/21/400/300" alt="Photo 2" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/id/35/400/300" alt="Photo 3" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/id/41/400/300" alt="Photo 4" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/id/51/400/300" alt="Photo 5" />
+      </div>
+      <div class="photo">
+        <img src="https://picsum.photos/id/61/400/300" alt="Photo 6" />
+      </div>
+    </section>
+  </body>
+</html>

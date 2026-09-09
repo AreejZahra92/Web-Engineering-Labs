@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layout Debug — Break and Fix</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          font-family: system-ui, sans-serif;
+          margin: 0;
+          padding: 1rem;
+        }
+        h2 {
+          margin-top: 2rem;
+        }
+
+        /* ============================================
+         BUG 1: Flex items overflowing (flex-wrap missing)
+         ============================================ */
+
+        /* BROKEN version (commented out — this caused overflow):
+      .flex-broken {
+        display: flex;
+        gap: 1rem;
+      }
+      */
+
+        /* FIXED: added flex-wrap: wrap so items wrap instead of overflowing */
+        .flex-fixed {
+          display: flex;
+          <!-- flex-wrap: wrap; /* FIX: without this, items shrink/overflow past the screen edge */ -->
+          gap: 1rem;
+        }
+
+        .flex-item {
+          background: #7c4dff;
+          color: white;
+          padding: 1rem 1.5rem;
+          border-radius: 6px;
+          flex: 0 0 160px;
+          text-align: center;
+        }
+
+        /* ============================================
+         BUG 2: Image causing horizontal scroll
+         ============================================ */
+
+        /* BROKEN version (commented out — this caused horizontal scroll):
+      .broken-img {
+        width: 800px;
+      }
+      */
+
+        /* FIXED: max-width: 100% keeps image inside its container */
+        .fixed-img {
+          width: 800px; /* FIX: image can never exceed the width of its parent */
+          height: auto;
+          display: block;
+        }
+
+        .container {
+          max-width: 600px;
+          border: 2px dashed #999;
+          padding: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Layout Debug — Break and Fix</h1>
+
+    <h2>Bug 1: Flex items overflowing (missing flex-wrap)</h2>
+    <p>
+      Fixed below — resize the window narrow and the purple boxes wrap to a new
+      line instead of overflowing off-screen.
+    </p>
+    <div class="flex-fixed">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+      <div class="flex-item">Item 5</div>
+      <div class="flex-item">Item 6</div>
+    </div>
+
+    <h2>Bug 2: Image causing horizontal scroll</h2>
+    <p>
+      Fixed below — the image is constrained with max-width: 100%, so it never
+      exceeds its container width.
+    </p>
+    <div class="container">
+      <img
+        class="fixed-img"
+        src="https://picsum.photos/id/29/800/500"
+        alt="Wide landscape photo"
+      />
+    </div>
+  </body>
+</html>
